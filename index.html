@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#2563EB" />
+    <meta name="description" content="A shared calendar for two people." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Calendar" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <title>Calendar App</title>
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        overflow: hidden;
+        margin: 0;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+    </style>
+  <meta name="theme-color" content="#2563EB">
+<meta name="description" content="A shared calendar for two people.">
+<link rel="icon" href="/calendar-app-pwa/favicon.ico"/></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./service-worker.js').catch((error) => {
+            console.error('PWA service worker registration failed:', error);
+          });
+        });
+      }
+    </script>
+  <script src="/calendar-app-pwa/_expo/static/js/web/AppEntry-651690a3c49a527d9713593d96f7a357.js" defer></script>
+</body>
+</html>
